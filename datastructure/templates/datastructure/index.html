@@ -1,9 +1,37 @@
-{% if latest_question_list %}
-    <ul>
-    {% for question in latest_question_list %}
-        <li><a href="/datastructure/{{ question.id }}/">{{ "Problem" }}</a></li>
-    {% endfor %}
-    </ul>
-{% else %}
-    <p>No polls are available.</p>
-{% endif %}
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'datastructure/style.css' %}">
+
+<!DOCTYPE html>
+<html>
+    <head>
+            <title>손지운's Homepage</title>       
+            <meta charset="utf-8">
+            <link rel="preconnect" href="https://fonts.googleapis.com">
+            <link href="https://fonts.googleapis.com/css2?family=Itim&display=swap" rel="stylesheet"> 
+    </head>
+    
+    <body>
+        
+        <div class="navbar">
+            <p>Sonjiwoon</p>
+            <div class="list">
+                <ul class="ul">
+                <li class="ul"><a href="#">Sign Up</a></li>
+                <li class="ul"><a href="#">Login</a></li>
+                </ul>
+            </div>
+        </div>
+        <fieldset>
+
+            {% if latest_question_list %}
+            <ul>
+                {% for question in latest_question_list %}
+                <li><a href="/datastructure/{{ question.id }}/">{{ question.question_text }}</a></li>
+                {% endfor %} 
+            </ul>
+            {% else %}
+            <p>No polls are available.</p>
+            {% endif %}
+</fieldset>
+    </body>
+</html>

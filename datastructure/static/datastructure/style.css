@@ -1,0 +1,29 @@
+
+.navbar {
+    height: 60px;
+}
+.navbar p {
+    display: inline;
+    font-weight: bold;
+    font-family: 'Nanum Brush Script', cursive;
+    font-size: 60px;
+}
+.list {
+    float: right;
+    line-height: 60px;
+}
+.ul {
+    list-style: none;
+    display: inline; 
+}
+
+.person {
+    float: left;
+    width: 30%;  
+    display: inline;
+}
+
+body {
+    font-family: 'Nanum Brush Script', cursive;
+}
+
